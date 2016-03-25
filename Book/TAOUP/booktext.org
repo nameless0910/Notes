@@ -1,0 +1,158 @@
+* Philosophy
+- 只提供机制而不提供方针的哲学
+- 跨平台可移植性
+- Internet 和万维网
+- 灵活性
+- Unix Hack
+- Down-to-top
+- Unix 管道发明者 Mcllroy
+  1. One Procedure Do One Thing,Don't add new feature to orign procedure
+  2. Assum One Output is Other's Input. Avoid serious format.Don't  insist interactive imput
+  3. Use dsign and sorfware early,Rewrite clumsy code
+  4. Use tools to make things easy firstly
+- Pike
+  1. Don't change codes until you make sure is the bottleneck
+  2. Estimate,and then optimize speed
+  3. If n is large,you can consider garish algorithms,base 2
+  4. Try to use simple algothms and data structure,Garish algothms are easily having bug
+  5. The core of programming is data structure,not algothms
+  Note:Ken Thomspon think 4 is important and he told that exhaustion if you don't sure
+- Summary of Unix Philosophy
+  1. Clean APIs combine simple component
+  2. Clearly
+  3. Consider combining when you design
+     - 以一点点格式解析的代价，换得可以使用通用工具来构造和解读数据流
+     - 把尽可能多的编程元素组织为一套定义良好的 API
+  4. Separation
+     - 将应用按照一个库来编写,应用的控制流程由脚本撰写,like Emacs
+     - 将程序分成可以协作的前端和后端进程，通过套接字上层的专用应用协议进行通讯
+  5. Clean,Uncomplex
+  6. Programming small procedure
+  7. Transparent,Design is visible,to debug and examine
+     - 程序带有监视和显示内部状态的功能
+  8. Strongly
+     - Consider large input
+     - Avoid exception 
+  9. Express, Logical
+  10. Popilarity API
+  11. Less comment
+  12. when have a error,quit immediately,and have enough error message
+      - 宽容性
+  13. Would rather cost machine one minute,don't waste one second
+  14. Avoid hand wirte,Use procedure to produce produce
+  15. Have a modeln before optimize
+      - 90%的功能现在实现,比 100%的功能永远实现不了好
+      - 过早的优化是万恶之源
+      - 先能走,再学跑
+  16. Variously
+  17. Expandly,Design consider fulture
+- K.I.S.S
+- Use Unix Philosophy
+  1. 只要可行,Everything could be done as a filter without source and object
+  2. Data flow try to textual
+  3. DMS and application protocols textual
+  4. Complex front-end separate with back-end
+  5. Before use C,Use Interpreted language
+  6. When only one language make complexly,Use more language
+  7. 宽收严发
+  8. when filte message,Don't discard message that couldn't discard
+  9. small is beatifully,work and have less feature
+- Do when you see
+  Note: If you don't which is true,do less work only make sure task finish until you know what is true
+- Don't repeat wheel.
+- Master tools and make all automation
+
+* History
+* Contrasts Unix Philosophy with Others
+- 一切皆文件
+- 抢先式多任务
+- 管道及 IPC 要求把程序间的通讯简化到某一程度而促使功能分离
+- 内部边界
+  1. 内存管理,用 MMU
+  2. 为多用户设置权限组
+  3. 涉及关键安全性的功能限制在尽可能小的可信代码块上
+- 文件属性和记录结构
+  - Unix 全无
+  - 另一些用 out-of-band data 将文档文件同能够解读它的 APP 关联,Unix 则使用 APP 识别"特征数"或是文件内的其他类型数据
+- 二进制文件格式
+  - 即时支持命令行接口,脚本和管道,也几乎无法形成 filter
+  - Data file 只有专用工具才能访问
+- CLI 很弱导致
+  - 程序无法考虑未预料的方式相互协作
+  - 远程系统管理难于实现,更依赖网络
+  - 简单的非交互程序也导致 GUI 开销或复杂的脚本接口
+  - 服务器,守护程序和后台进程几乎无法写出
+* Modularity
+* Languages
+- C/C++以增加实现时间和(特别是)调试时间来优化效率
+- Center Question: Programmer manager memory themselves
+  - 声明变量 显式管理链表 设置缓冲大小 检测或防止缓冲溢出 分配和回收动态储存
+- 使用脚本语言的性能损失微不足道,真实世界的程序往往由 I/O 事件等待,网络延迟以及缓存列填充等限制
+- 避免手动管理内存的语言通过运行时向可执行体嵌入一个内存管理器,运行环境分为程序部分及解释器部分,解释器内核由多个程序部分共享
+** C
+- 要求速度最快且需要实时需求,或与 OS 内核紧密联系
+- 必须在多个 OS 上移植
+- 尽可能接近裸机,保持稳定
+- 在 Unix 间移植 C 几乎总是可行,但在诸如信号和进程控制需要一些技巧
+- C 代码生成器从声明的说明规格中为 tokenizer 和语法分析器生成源码,yacc 和 lex
+- The C Programming Language[Ritchie]
+** C++
+- 对后兼容 C 的要求阻碍了 C++完全自动化动态内存管理
+- 不成熟的标准化
+- OO 方法导致厚重胶合层和维护问题
+- 与 LISP 相似的异常:在被处理程序捕捉之前可以沿调用栈向上 pop 出值或对象
+- STL 提供了泛型编程
+- Use C++ when its library have good method for your application,or OO have large advantage
+- The C++ Programming Language[Stroustrup] C++:A Dialog[Heller] C++ Annotations[Brokken]
+** Shell
+- shell have portable problem:Use many assist instruction
+- The Unix Programming Environment[Kernighan-Pike]
+** Perl
+- Perl 是增强版 shell,为了替代 awk 而设计
+- 最强功能是其内置的对文本,面向行的数据格式进行模式导向的处理功能(正则表达式)
+- 包含更强大的数据结构,包括混合元素类型的动态数组和支持名-值对应的字典类型
+- 完备的 Unix API 支持
+- 适合完成简单的 TCP/IP 客户端或者服务器端
+- 强大的社区
+- 主要缺点:某些{丑陋,复杂,需要谨慎使用}
+- Programming Perl[Wall] Learning Perl[Schwartz]
+** Tcl 
+- 设计用来连入 C 编译库的小型语言解释器,提供 C 代码的脚本控制,也适用与内嵌脚本
+- 没有保留字, 在函数调用和内置语言特性间没有语法区别
+- 缺点:薄弱的命名空间控制和模块性功能,除关联列表外没有数据结构,很难扩展 Tcl,语法怪异
+- Practical Programming in Tcl and Tk[Welch]
+- Tcl 解释器的可扩展性,古怪的位置分析器
+** Python
+- 设计本意是与 C 语言紧密集成
+- 出色的模块化特性,类型系统包括动态容器储存对象和关联列表,具有匿名 lambda 对象
+- 适合构建协议机器人和网络管理工具(标准发布包括大多数网络协议)
+- 由于运行期类型多态导致非常慢
+- Programming Python[Lutz]
+- 可被 frozen,准编译成纯 c 源码
+** Java
+- 最初设计目标: write once,run anywhere, 支持网页中嵌入交互程序,可在任何浏览器中运行
+- 自动管理内存的优势,支持 OO,保留大量类 C 语法,支持动态载入 C 调用并支持在 C 中把其作为嵌入语言
+- 类的可见/不可见区域的规定复杂,接口随避免多继承产生的复杂问题,但并不简单多少
+- 内部类和匿名类导致非常混乱的代码
+- 缺乏可靠的析构方法,意味内存以外的其他资源,如 mutex 和锁,难以保证得到正确管理
+- Unix 的比如信号,poll,select 功能也无法从 Java 主体访问
+- Java 没有管理不同库版本的方法
+- Jave In A Nutshell[FlanaganJava] Thinking in Java[Eckel]
+** Emacs Lisp
+- 为开发工具提供前端
+- 如何涉及交互编辑特定文件格式或文本数据的 Application,使用其进行原型设计都是最好的
+- 适合构建必须和文本编辑器紧密整合
+- 自动内存管理 OS 规范为 Emacs 内核
+- 狂吃资源(but today is not a problem)
+- The GNU Emacs Lisp Reference Mabual[info]  Writing GNU Emacs Extensions[Glickstein]
+
+
+
+
+
+* Tools
+- IDE is well to simple language with less tools
+- Programming with GNU Software[Loukides-Oram]
+- Learning GNU Emacs[Cameron]
+- yacc lex
+- 
