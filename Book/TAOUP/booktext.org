@@ -1,3 +1,4 @@
+#+STARUP:context
 * Philosophy
 - 只提供机制而不提供方针的哲学
 - 跨平台可移植性
@@ -83,6 +84,163 @@
   - 简单的非交互程序也导致 GUI 开销或复杂的脚本接口
   - 服务器,守护程序和后台进程几乎无法写出
 * Modularity
+- 在程序的子程序层上进行模块化
+- 封装良好的模块不会
+  - 过多披露细节
+  - 直接调用其他模块的实现码
+  - 胡乱共享全局数据
+- 先定义接口,编写简要注释,再开始编写代码
+- Brook 定律
+- 200 到 400 逻辑行的代码最好
+- 紧凑性:有经验的用户通常不需要用户手册
+- 正交性
+- SPOT
+  - 常量,表和元数据应该只声明和初始化一次,并导入其他地方
+  - 如果代码有重复数据是因为在两个不同地方,考虑写个函数工具或代码生成程序
+  - 文档重复了代码中的知识点,能否从部分代码中生成部分文档
+  - 如果头文件和接口声明重复了实现代码中的知识点,是否可以从代码中生成头文件和接口声明
+  - 数据结构:No junk,No confusion
+- 围绕解决一个定义明确的问题
+- 软件分层
+  - 自底向上
+    1. 能够精确预知程序的任务
+    2. 实现中程序规格不会发生大的改变
+    3. 在底层,有充分自由来选择程序完成任务的方式
+  - 自顶向下:操作在设计时能在不同的物理设备间通用
+  - 抽象化硬件 | 围绕某个行为模型组织代码
+  - 双管齐下:以 top-to-down 的应用逻辑表达抽象规范,以函数或库来收集底层的域原语
+- 胶合层:阻抗匹配(impedance match)
+  - 薄胶合层,不要组织一个中间层
+  - C
+- 库和插件
+- OO 将数据结构函数和数据一起封装在可视为单元的一个对象中
+  - OO 将人带入过度分层陷阱(抽象子类)
+  - 使程序丧失优化机会
+- 模块式编码
+  - 有多少全局变量
+  - 单个模块大小
+  - 模块内单个函数大小:函数原型后立即写一行注释
+  - 代码是否有内部 API
+  - {API 入口,类的方法,数据结构的成员}是否超过 7 个
+  - 每个模块入口点数量如何分布
+* Textuality
+- marshaling unmarshaling
+- 互用性,透明性,可拓展性
+- 少用二进制协议
+- 二进制格式通常指定给定值的分配位数(IPv4 的地址是 32 位,要扩展到 128 位,如 IPv6,就需要大修改)
+- 使用二进制唯一理由:大批量数据(大图像和多媒体,延迟有极高要求)
+- PNG 标准
+- 数据文件元格式
+  - DSV(Delimiter-Separated Values)
+- XML in a Nutshell[Harold-Means]
+- Unix 文本文件格式的约定
+  - 如果可能,以新行符结束的每一行只存一个记录
+  - 每行不超过 80 字符
+  - 使用#引入注释
+  - 支持反斜杠约定
+  - 使用冒号或者任何连续的空白作为字段分隔符
+  - 不要过分区别 TAB 和 whitespace
+  - 优先选用 16 进制
+  - 复杂记录,采用 stanza 格式,记录多行,用%%\n 或%\n 作为记录分隔符
+  - 节格式中,要么每行一个记录字段,妖魔让记录格式用冒号终止的字段名关键字作为引导
+  - 节格式支持连续行
+  - 要么包含一个版本号,要么将格式设计成相互独立的自描述字节块
+  - 注意浮点数取整问题
+  - 不要仅对文件的一部分进行压缩或者转换成二进制码
+  - end-to-end
+  - End-to-End Arguments in System Design[Saltzer]
+  - SMTP
+  - IMAP
+  - 应用协议元格式
+    - HTTP
+* Transparency 
+- 用户:良好的文档 | 程序员:良好的变量和函数名
+- 透明性 | 可显性
+- gcc(G:回归测试)
+- 找到一个方法,可以访问具体细节,有不太显眼
+- 不要叠加抽象层
+- 问题
+  1. 程序调用最大静态深度谨慎大于 4
+  2. 代码不变性质
+  3. API 各个函数调用是否正交
+  4. 是否存在一些顺手可用的关键数据结构或全局唯一的记录器,捕获了系统的高层次状态
+  5. 数据结构或分类是否和代表的外部实体清晰一对一对应
+  6. 是否容易找到给定函数的代码部分,多大精力读懂
+  7. 代码增加了特殊情况还是避免了特殊情况
+  8. 有多少 magic number
+- 不要过度保护
+- 编写 textualizer/浏览器
+* Multiprogramming 
+- 把程序分解成更简单的子进程
+  1. 降低进程生成的开销
+  2. 提供方法(shellout,I/O 重定向,管道,消息传递和套接字)简化进程间的通信
+  3. 使用能由管道和套接字传递的简单,透明的文本数据格式
+- Improving Context Switching Performance of Idle Tasks under Linux[Appleton]
+- 线程提高了全局复杂度,尽量避免使用多线程
+- 更强的安全性
+- setuid bit | boly-on
+- Unix Shell As a 4GL[Schaffe-Wolf]
+- 管道缺点是单向性
+- Wrapper
+- Bernstein chaining
+- 从进程
+  - 两者间涉及的协议无足轻重
+  - 应用协议通讯
+- 对等进程间通信
+  - 临时文件
+  - 信号
+  - 套接字
+  - 共享内存
+- 线程:时许依赖(问题) 锁定和解锁成本高
+- Why Threads Are a Bad Idea[Ousterhout96]
+* Minilanguages
+- 设计
+  1. 预先认识到可以使用微型语言设计把编程问题的规格说明提升一个层次
+  2. 注意带规格说明文件格式越来越类似微型语言
+  3. Wrong :n 通过扩展变成微型语言
+- XSLT:Mastering XML Transformations[Tidwell]
+- syntactic sugar
+- Notable Design Patterns for Domain-Specific Languages[Spinellis]
+- sandboxed
+- 宏-慎用
+* Generation
+- 数据驱动编程
+  - 与 OO 区别
+    1. 数据驱动编程中,数据不仅仅是某个对象的状态,实际上还定义了程序的控制流
+    2. OO 首先考虑封装,而数据驱动编程看重编写尽可能少的固定代码
+  - 内省,metaclass hacking
+* Configuration
+- 一切皆可配置
+- 对于能够可靠的进行自动检测的东西,不要提供配置开关
+- 用户不应该看到优化开关
+- 增加配置选项
+  - 能省掉吗
+  - 能否通过改变程序的常规行为从而无需这个选项
+  - 少考虑可配置性,多考虑正确性
+  - 选项附加的行为是否应该用一个独立的程序来代替
+- 风格
+  1. #开始的说明性注释
+  2. 不区别空白符
+  3. 把多个空行和注释行视为单个空行
+  4. 词法上把文件视作简单的用空吧分割的标记序列
+  5. 支持以字符串语法对待内嵌空白符的标记,使用单或爽引号作为对称的分隔符
+  6. 支持\语法
+- 可移植性
+* Interfaces
+- 最小立异原则
+- 简洁:表现力,易用,透明和脚本化能力
+- 过滤器模式{Cantrip 源 接收器 编译器 ed Roguelike CLI 服务器 基于语言
+- 引擎和接口分离}
+  - 配置者/执行者
+  - 假脱机/守护进程
+  - 驱动/引擎
+  - 客户端/服务器
+- 多价程序模式
+* Optimization
+- 将空间或者时间复杂度降下来
+- 先估量,再优化
+- 保持代码短小简单
+* Complexity
 * Languages
 - C/C++以增加实现时间和(特别是)调试时间来优化效率
 - Center Question: Programmer manager memory themselves
@@ -146,13 +304,56 @@
 - 狂吃资源(but today is not a problem)
 - The GNU Emacs Lisp Reference Mabual[info]  Writing GNU Emacs Extensions[Glickstein]
 
-
-
-
-
 * Tools
 - IDE is well to simple language with less tools
 - Programming with GNU Software[Loukides-Oram]
 - Learning GNU Emacs[Cameron]
 - yacc lex
-- 
+- make Managing Projects with Make[Oram-Talbot]
+- CVS
+- gdb
+- profiler
+- Emacs
+* Reuse:On Not REinventing the Wheel
+- SourceForge Freshmeat ibiblio
+* Portability
+- 可移植性和编程语言的选择
+  - C:IPC 线程 GUI 接口
+    - Recommended C Style and Coding Standards[Cannon] The Practice of Programming[Pike-Kernighan]
+  - C++:编译器
+  - Shell:大量使用其他他可移植性差的命令和过滤器
+  - Perl:插件库
+  - Python:次版本号重要
+  - Tcl
+  - Java:线程
+  - Emacs Lisp
+- 避免系统依赖性
+- autoconf
+* Documentation
+- troff | Documenter's Workbench | manpage
+- TEX
+- HTML
+- DocBook
+* Open Source
+- 原则
+  1. 源码公开
+  2. 尽早发布,经常发布
+  3. 给贡献以表扬
+- 协同工作
+  - 发送针对当前版本代码的非可生成的补丁
+  - 文档
+  - 不要发送指使优化 RCS 或 SCCS 的补丁段
+  - 用-c 或-u 而不是-e
+  - 解释
+  - 有益的注释
+- 文件命名:项目前缀-版本号.{src,bin}.归档和压缩扩展名
+- 健全检查
+- README 拼写检查
+- 打包文件解包到单一文件下
+- 提供效验和
+- 交流
+* Futures
+
+
+
+
