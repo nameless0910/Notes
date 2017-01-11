@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-01-07 周六 16:44 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org4b568d8">1. Introduction</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4b568d8" class="outline-2">
+<h2 id="org4b568d8"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>编译器本身是个机器语言程序,编译源程序为与之等价的目标程序后就隐退</li>
+<li>解释器类似虚拟机,机器语言为高级程序设计语言</li>
+<li>Late binding 一个程序可以为自己生成新的代码片段,并且可以随后去执行它们(把有关程序实现的决策推迟到运行时才做)</li>
+<li>编译性能更好(编译器可以保证 x 就在 49378,无论源程序何时引用 x,就可生成访问此位置的机器语言指令,解释器需要在每次访问 x 时去一个表格里查找它)</li>
+<li>许多语言是混合形式,比如 Java,如果编译器非"机械翻译",中间目标文件与源文件没有很强相似性,还叫做编译语言(彻底的分析和非平凡的变换)</li>
+<li>大部分解释性语言使用预处理器:去除注释和空白,将字符结组形成各种单词(关键字,标识符,数和符号) | 可能采用与宏汇编器类似的方式展开各种缩写,标记出各种高级语法结构{循环,子程序}</li>
+<li>Fortran
+<ul class="org-ul">
+<li>linker 链接不完全的机器语言程序和库例程</li>
+<li>库例程:硬件指令集合的扩充</li>
+<li>输出库例程包含了一个格式解释器</li>
+<li>类似解释器也出现在 C 及其后裔的 printf 例程</li>
+</ul></li>
+<li>大部分编译器生成汇编语言,利于 debug,也利于将编译器隔离在机器语言文件格式之外,有利于移植到新的操作系统</li>
+<li>C 以及 Unix 下其他语言的编译器
+<ul class="org-ul">
+<li>预处理器:删除注释和展开宏
+<ul class="org-ul">
+<li>提供了 conditional compilation,能根据命令删除代码的一些部分</li>
+</ul></li>
+</ul></li>
+<li>预编译器与编译器区别在于前者只基于模式匹配进行简单变换,而后者"理解"源码</li>
+<li>早期 Pascal
+<ul class="org-ul">
+<li>三个工具
+<ol class="org-ol">
+<li>Pascal Complier,Output P-code</li>
+<li>Same Complier translate to P-code</li>
+<li>P-code interpreter use Pascal</li>
+</ol></li>
+<li>得到 Pascal 实现:bootstrap
+<ol class="org-ol">
+<li>Translate P-code interpreter to some language could work</li>
+<li>Use P-code interpreter to run P-code Complier</li>
+<li>More fast,Change Pascal Complier to translate to assumbly language or machine instruction</li>
+</ol></li>
+</ul></li>
+<li>支持大量 late binding 语言{Lisp,Prolog,Smalltalk}的编译器
+<ul class="org-ul">
+<li>需要准备好生成一些代码,让它们去执行解释器的许多工作,或者调用一个库去完成这些工作</li>
+<li>对于一些重要的特殊情况,编译器也会生成一些代码,对运行前不能完成的决策做出一些合理的假设,假设成立代码会运行很快,假设错误,动态检查就会发现其中不协调的地方,并转到解释器处理</li>
+</ul></li>
+<li>某些情况,程序设计系统会有意把编译推迟到尽可能晚的时间去做
+<ul class="org-ul">
+<li>Lisp 和 Prolog:运行中调用编译器,把新生成的代码编译,或者针对某个特定的输入集合做代码优化</li>
+<li>Java:字节码,第一个 Java 实现基于字节码解释器,而更新的实现采用即时编译器,在程序具体执行前,即时编译器将它由字节码编译为机器语言</li>
+<li>Csharp 的目标也是即时编译,主 Csharp 编译器生成 dotNET 的 CIL(Common Intermediate Language),在被执行前翻译成机器语言,CIL 强调语言无关性,可作为不同前端编译器生成的代码</li>
+<li>许多机器上,编译层指令并不真正翻译到硬件上,在微代码写成的解释器上运行</li>
+</ul></li>
+<li>[扫描器(词法分析)]-&gt;[分析器(语法分析)]-&gt;[语义分析和中间代码生成]-&gt;[与机器无关的代码优化(可选)]-&gt;[目标代码生成]-&gt;专门针对机器的代码改进(可选)]            |         [符号表]
+     /                \          /           \                      /                                             \                                        /               \                   /            \                       /                        \
+字符流           单词流             语法分析树                                            抽象语法数或其他中间形式               修改后的中间格式      汇编/机器/其他                      修改后的中间格式</li>
+<li>直至语法分析为前端,其他为后端</li>
+<li>Passes</li>
+<li>扫描器读入一个个的字符,并将它们组合成单词,程序中最小的有意义的单位
+<ul class="org-ul">
+<li>需要会生成一个表格,给各个单词做好行列位置标记</li>
+<li>语法分析树中根据具体的组成部分来表示各种高级结构(语句,表达式,子程序),每个结构是一个节点</li>
+<li>上下文无关法</li>
+</ul></li>
+<li>语义分析 -&gt; symbol table[data struction]
+<ul class="org-ul">
+<li>标识符定义</li>
+<li>标识符上下文</li>
+<li>调用参数</li>
+<li>switch 分支标号是否相同</li>
+<li>任一函数有非空的返回类型</li>
+</ul></li>
+<li>static semantics</li>
+<li>dynamic semantics
+<ul class="org-ul">
+<li>除非变量有值,否则不会再表达式使用</li>
+<li>除非指针指向合法的对象,否则不会被解引用</li>
+<li>数组下标表达式的值介于下标范围</li>
+<li>算术不会溢出</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2017-01-07 周六 16:44</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

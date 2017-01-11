@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-01-07 周六 16:38 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org7b356ca">1. 程序员思维训练</a>
+<ul>
+<li><a href="#org19d5c4d">1.1. 绪论</a>
+<ul>
+<li><a href="#org7858eff">1.1.1. 软件是在头脑中创建的</a></li>
+<li><a href="#org4b71699">1.1.2. 1.1 再提实用</a></li>
+<li><a href="#org3c39469">1.1.3. 1.2 关注情境</a></li>
+<li><a href="#orgf42fa47">1.1.4. 1.3 所有人都关注这些技能</a></li>
+</ul>
+</li>
+<li><a href="#orgb6c02f7">1.2. 从新手到专家的历程</a>
+<ul>
+<li><a href="#org2653fd1">1.2.1. 制造问题的思维方式无法解决问题</a></li>
+<li><a href="#orgb1e93a7">1.2.2. 2.1 新手与专家</a></li>
+<li><a href="#orgda2536c">1.2.3. 2.2 Dreyfus 模型的五个阶段</a></li>
+<li><a href="#orgd596a76">1.2.4. 2.3 现实中的 Dreyfus 模型</a></li>
+<li><a href="#org0d305ec">1.2.5. 2.4 有效使用 Dreyfus 模型</a></li>
+<li><a href="#org0fdd557">1.2.6. 2.5 警惕工具陷阱</a></li>
+<li><a href="#orgf273d58">1.2.7. 2.6 再一次考虑情境</a></li>
+<li><a href="#org4d14200">1.2.8. 2.7 日常的 Dreyfus 模型</a></li>
+</ul>
+</li>
+<li><a href="#org831aa70">1.3. 认识大脑</a>
+<ul>
+<li><a href="#orgc2c46e7">1.3.1. 3.1 双 CPU 模式</a></li>
+<li><a href="#org93397d1">1.3.2. 3.2 随时记录想法</a></li>
+<li><a href="#org310498d">1.3.3. 3.3 L 型和 R 型的特征</a></li>
+<li><a href="#orga156159">1.3.4. 3.4 R 型的崛起</a></li>
+<li><a href="#org1160c44">1.3.5. 3.5 R 型看森林，L 型看树木</a></li>
+<li><a href="#org90e2111">1.3.6. 3.6 DIY 脑部手术和神经可塑性</a></li>
+</ul>
+</li>
+<li><a href="#org023a5a1">1.4. 利用右脑</a>
+<ul>
+<li><a href="#org18392f2">1.4.1. 4.1 启动感官输入</a></li>
+<li><a href="#org61a1b59">1.4.2. 4.2 用右脑画画</a></li>
+<li><a href="#org4081aa4">1.4.3. 4.3 促进 R 型到 L 型的转换</a></li>
+<li><a href="#org9d08b4d">1.4.4. 4.4 收获 R 型线索</a></li>
+<li><a href="#org7587f64">1.4.5. 收获模式</a></li>
+</ul>
+</li>
+<li><a href="#orga6ba82c">1.5. 调试大脑</a>
+<ul>
+<li><a href="#orge74e2ec">1.5.1. 5.1 了解认知偏见</a></li>
+<li><a href="#org39c6565">1.5.2. 5.2 认清时代影响</a></li>
+<li><a href="#org1768fbb">1.5.3. 5.3 了解个性倾向</a></li>
+<li><a href="#org386f864">1.5.4. 5.4 找出硬件问题</a></li>
+<li><a href="#org0f8e14e">1.5.5. 5.5 现在我不知道该思考什么</a></li>
+</ul>
+</li>
+<li><a href="#orgecd29d7">1.6. 主动学习</a>
+<ul>
+<li><a href="#org56ae0de">1.6.1. 6.1 学习是什么，不是什么</a></li>
+<li><a href="#org7ce139d">1.6.2. 6.2 瞄准 SMART 目标</a></li>
+<li><a href="#orgbde7fb3">1.6.3. 6.3 建立一个务实的投资计划</a></li>
+<li><a href="#org39564d9">1.6.4. 6.4 使用你的原生学习模式</a></li>
+<li><a href="#org2993fb6">1.6.5. 6.5 一起工作，一起学习</a></li>
+<li><a href="#orge8d113e">1.6.6. 6.7 使用 SQ3R 法主动阅读</a></li>
+<li><a href="#org2ad7fb6">1.6.7. 6.8 使用思维导图</a></li>
+<li><a href="#orgbd3dc39">1.6.8. 6.9 利用文档的真正力量</a></li>
+<li><a href="#orgc516b7a">1.6.9. 6.10 以教代学</a></li>
+</ul>
+</li>
+<li><a href="#org831c1bb">1.7. 积累经验</a>
+<ul>
+<li><a href="#orgf7562ad">1.7.1. 7.1 为了学习而玩耍</a></li>
+<li><a href="#org4617b86">1.7.2. 7.2 利用现有知识</a></li>
+<li><a href="#orgd19bcb7">1.7.3. 7.3 正确对待实验中的失败</a></li>
+<li><a href="#org21937fb">1.7.4. 7.4 了解内在诀窍</a></li>
+<li><a href="#orga466862">1.7.5. 7.5 压力扼杀认知</a></li>
+<li><a href="#org7b767de">1.7.6. 7.6 想象超越观感</a></li>
+<li><a href="#orgbcea706">1.7.7. 7.7 像专家一样学习</a></li>
+</ul>
+</li>
+<li><a href="#org9558be9">1.8. 控制注意力</a>
+<ul>
+<li><a href="#org1704c30">1.8.1. 8.1 提高注意力</a></li>
+<li><a href="#orgc288304">1.8.2. 8.2 通过分散注意力来集中注意力</a></li>
+<li><a href="#orgb5a7e64">1.8.3. 8.3 管理知识</a></li>
+<li><a href="#orgb76f98f">1.8.4. 8.4 优化当前情境</a></li>
+<li><a href="#org9517e1d">1.8.5. 8.5 积极的管理干扰</a></li>
+<li><a href="#org608f49d">1.8.6. 8.6 保持足够大的情境</a></li>
+</ul>
+</li>
+<li><a href="#orgf0fe7fe">1.9. 超越专家</a>
+<ul>
+<li><a href="#org9a98a5e">1.9.1. 9.1 有效的改变</a></li>
+<li><a href="#org0d11954">1.9.2. 9.2 明天上午做什么</a></li>
+<li><a href="#org114f56b">1.9.3. 9.3 超越专家</a></li>
+</ul>
+</li>
+<li><a href="#orgc9b1060">1.10. 诀窍</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7b356ca" class="outline-2">
+<h2 id="org7b356ca"><span class="section-number-2">1</span> 程序员思维训练</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-org19d5c4d" class="outline-3">
+<h3 id="org19d5c4d"><span class="section-number-3">1.1</span> 绪论</h3>
+<div class="outline-text-3" id="text-1-1">
+</div><div id="outline-container-org7858eff" class="outline-4">
+<h4 id="org7858eff"><span class="section-number-4">1.1.1</span> 软件是在头脑中创建的</h4>
+</div>
+<div id="outline-container-org4b71699" class="outline-4">
+<h4 id="org4b71699"><span class="section-number-4">1.1.2</span> 1.1 再提实用</h4>
+<div class="outline-text-4" id="text-1-1-2">
+</div><ol class="org-ol"><li><a id="org38ecad0"></a>切勿随波逐流<br  /></li></ol>
+</div>
+<div id="outline-container-org3c39469" class="outline-4">
+<h4 id="org3c39469"><span class="section-number-4">1.1.3</span> 1.2 关注情境</h4>
+<div class="outline-text-4" id="text-1-1-3">
+</div><ol class="org-ol"><li><a id="org0d45169"></a>始终关注情景<br  /></li></ol>
+</div>
+<div id="outline-container-orgf42fa47" class="outline-4">
+<h4 id="orgf42fa47"><span class="section-number-4">1.1.4</span> 1.3 所有人都关注这些技能</h4>
+<div class="outline-text-4" id="text-1-1-4">
+</div><ol class="org-ol"><li><a id="org746a984"></a>有些东西是基础的，各领域相通的<br  /></li></ol>
+</div>
+</div>
+<div id="outline-container-orgb6c02f7" class="outline-3">
+<h3 id="orgb6c02f7"><span class="section-number-3">1.2</span> 从新手到专家的历程</h3>
+<div class="outline-text-3" id="text-1-2">
+</div><div id="outline-container-org2653fd1" class="outline-4">
+<h4 id="org2653fd1"><span class="section-number-4">1.2.1</span> 制造问题的思维方式无法解决问题</h4>
+</div>
+<div id="outline-container-orgb1e93a7" class="outline-4">
+<h4 id="orgb1e93a7"><span class="section-number-4">1.2.2</span> 2.1 新手与专家</h4>
+<div class="outline-text-4" id="text-1-2-2">
+</div><ol class="org-ol"><li><a id="org9687913"></a>清晰表述专业技能十分困难<br  /></li></ol>
+</div>
+<div id="outline-container-orgda2536c" class="outline-4">
+<h4 id="orgda2536c"><span class="section-number-4">1.2.3</span> 2.2 Dreyfus 模型的五个阶段</h4>
+<div class="outline-text-4" id="text-1-2-3">
+</div><ol class="org-ol"><li><a id="orge36375c"></a>2.2.1 新手<br  /><ol class="org-ol"><li><a id="org3e35076"></a>经验很少（经验：通过实施这项技术促进了思维的转变）<br  /></li>
+<li><a id="org66f0743"></a>新手需要指令清单<br  /></li>
+<li><a id="org6665954"></a>infinite regression 明确终止反复解释<br  /></li>
+<li><a id="org94201ba"></a>规则只能让你启程，不会让你走的更远<br  /></li></ol></li>
+<li><a id="org9480815"></a>2.2.2 高级新手<br  /><ol class="org-ol"><li><a id="org9df0d4c"></a>想要快速获取信息 （快速浏览文档寻找方法定义，不想寻根问底，或者温习知识）<br  /></li>
+<li><a id="orga17cc52"></a>不想要全局思维<br  /></li></ol></li>
+<li><a id="org4b90d54"></a>2.2.3 胜任者<br  /><ol class="org-ol"><li><a id="org0ae7acb"></a>能够建立问题域的概念模型<br  /></li>
+<li><a id="org324e6fd"></a>能够解决问题<br  /></li></ol></li>
+<li><a id="org9ed0a50"></a>2.2.4 精通者<br  /><ol class="org-ol"><li><a id="orgb7fcce2"></a>精通者能够自我纠正<br  /></li>
+<li><a id="orga1d1aec"></a>学习他人经验<br  /></li>
+<li><a id="org642f122"></a>理解和运用经验之谈<br  /></li>
+<li><a id="orgfda12b5"></a>知道下一步，没发生要改变什么，哪些计划要取消，应该采取什么行动<br  /></li>
+<li><a id="org8439c22"></a>有效运用软件模式<br  /></li></ol></li>
+<li><a id="org711345d"></a>2.2.5 专家<br  /><ol class="org-ol"><li><a id="orgce460e5"></a>不断寻找更好的方法和方式去做事<br  /></li>
+<li><a id="orgd4fd118"></a>专家凭直觉工作<br  /></li>
+<li><a id="org92f0d1a"></a>知道哪些是无关紧要的细节，哪些是非常重要的细节<br  /></li></ol></li></ol>
+</div>
+<div id="outline-container-orgd596a76" class="outline-4">
+<h4 id="orgd596a76"><span class="section-number-4">1.2.4</span> 2.3 现实中的 Dreyfus 模型</h4>
+<div class="outline-text-4" id="text-1-2-4">
+</div><ol class="org-ol"><li><a id="org6381485"></a>规则断送专家<br  /></li>
+<li><a id="org2c2d4c6"></a>新手需要被驾驭，专家需要自己去跑<br  /></li>
+<li><a id="org63adf15"></a>提升水平的变化<br  /><ol class="org-ol"><li><a id="org356a408"></a>从依赖规则向依赖直觉转变<br  /></li>
+<li><a id="org3b160ae"></a>观念转变，问题不再是相关度等同的所有单元的集合体，而是一个完整和独特的个体，其中只有某些单元是相关的<br  /></li>
+<li><a id="orgdd5add1"></a>从问题的旁观者变成问题涉及的系统本身的一部分<br  /></li></ol></li>
+<li><a id="org49550f1"></a>直觉和模式匹配的能力超过了显性认知<br  /></li></ol>
+</div>
+<div id="outline-container-org0d305ec" class="outline-4">
+<h4 id="org0d305ec"><span class="section-number-4">1.2.5</span> 2.4 有效使用 Dreyfus 模型</h4>
+<div class="outline-text-4" id="text-1-2-5">
+</div><ol class="org-ol"><li><a id="org34b54bb"></a>积极的实践<br  /><ol class="org-ol"><li><a id="org4b72237"></a>需要一个明确定义的任务<br  /></li>
+<li><a id="orgd12f5e3"></a>任务有适当难度<br  /></li>
+<li><a id="org2307bc9"></a>任务环境可以提供大量反馈，以便于采取行动<br  /></li>
+<li><a id="org6fa5d49"></a>提供重复犯错和纠正错误的机会<br  /></li></ol></li>
+<li><a id="org8994474"></a>2.4.1 勇于承担责任<br  /><ol class="org-ol"><li><a id="orga0458a6"></a>我只是执行命令是无用的<br  /></li>
+<li><a id="orgbfccf71"></a>模仿榜样<br  /></li>
+<li><a id="org0e4efa6"></a>没有实践就没有技能<br  /></li>
+<li><a id="org846d42e"></a>模仿-吸收-创新<br  /></li></ol></li>
+<li><a id="org3ba18fc"></a>2.4.2 在实践中保持技能<br  /><ol class="org-ol"><li><a id="org07754f9"></a>专家必须持续编程，并找到一个有意义，有价值的职业生涯<br  /></li></ol></li></ol>
+</div>
+<div id="outline-container-org0fdd557" class="outline-4">
+<h4 id="org0fdd557"><span class="section-number-4">1.2.6</span> 2.5 警惕工具陷阱</h4>
+<div class="outline-text-4" id="text-1-2-6">
+</div><ol class="org-ol"><li><a id="org37ada7e"></a>模型是工具，而非镜子<br  /></li>
+<li><a id="org8c22913"></a>混淆模型和现实<br  /></li>
+<li><a id="orgfad52ab"></a>低估不能形式化的特性<br  /></li>
+<li><a id="org50ad82f"></a>规定违背个人自主性的行为<br  /></li>
+<li><a id="orga30797a"></a>偏袒新手，从而疏远了经验丰富的员工<br  /></li>
+<li><a id="org0a51427"></a>阐明太多细节<br  /></li>
+<li><a id="org41caee3"></a>把复杂局势过于简单化<br  /></li>
+<li><a id="org880f12d"></a>追求过度一致<br  /></li>
+<li><a id="orgf00d57d"></a>忽视情景的细微差别<br  /></li>
+<li><a id="org0b8ee7a"></a>在遵从规则和自行判断之间犹豫<br  /></li>
+<li><a id="orgd9cdcb0"></a>故弄玄虚<br  /></li></ol>
+</div>
+<div id="outline-container-orgf273d58" class="outline-4">
+<h4 id="orgf273d58"><span class="section-number-4">1.2.7</span> 2.6 再一次考虑情境</h4>
+<div class="outline-text-4" id="text-1-2-7">
+</div><ol class="org-ol"><li><a id="org47e68aa"></a>警惕非情景化的客观性<br  /></li></ol>
+</div>
+<div id="outline-container-org4d14200" class="outline-4">
+<h4 id="org4d14200"><span class="section-number-4">1.2.8</span> 2.7 日常的 Dreyfus 模型</h4>
+<div class="outline-text-4" id="text-1-2-8">
+</div><ol class="org-ol"><li><a id="org1648e2f"></a>一种规格并非处处适用<br  /></li>
+<li><a id="orga9fe562"></a>获取专业技能<br  /><ol class="org-ol"><li><a id="org382d40f"></a>培养更多的直觉<br  /></li>
+<li><a id="org2f722da"></a>认识到情境和观察情境模式的重要性<br  /></li>
+<li><a id="orgb73dcfa"></a>更好的利用我们自己的经验<br  /></li></ol></li></ol>
+</div>
+</div>
+<div id="outline-container-org831aa70" class="outline-3">
+<h3 id="org831aa70"><span class="section-number-3">1.3</span> 认识大脑</h3>
+<div class="outline-text-3" id="text-1-3">
+</div><div id="outline-container-orgc2c46e7" class="outline-4">
+<h4 id="orgc2c46e7"><span class="section-number-4">1.3.1</span> 3.1 双 CPU 模式</h4>
+<div class="outline-text-4" id="text-1-3-1">
+</div><ol class="org-ol"><li><a id="orgc85b567"></a>内存和总线竞争<br  /></li></ol>
+</div>
+<div id="outline-container-org93397d1" class="outline-4">
+<h4 id="org93397d1"><span class="section-number-4">1.3.2</span> 3.2 随时记录想法</h4>
+<div class="outline-text-4" id="text-1-3-2">
+</div><ol class="org-ol"><li><a id="org6165d6b"></a>每个人都有好点子<br  /></li>
+<li><a id="org4af464b"></a>准备好做记录的工具，随身携带<br  /></li></ol>
+</div>
+<div id="outline-container-org310498d" class="outline-4">
+<h4 id="org310498d"><span class="section-number-4">1.3.3</span> 3.3 L 型和 R 型的特征</h4>
+</div>
+<div id="outline-container-orga156159" class="outline-4">
+<h4 id="orga156159"><span class="section-number-4">1.3.4</span> 3.4 R 型的崛起</h4>
+<div class="outline-text-4" id="text-1-3-4">
+</div><ol class="org-ol"><li><a id="org46569fe"></a>设计胜于功能<br  /></li>
+<li><a id="orgbb64577"></a>吸引力更有效<br  /></li>
+<li><a id="org87d30c8"></a>美来自选择<br  /></li></ol>
+</div>
+<div id="outline-container-org1160c44" class="outline-4">
+<h4 id="org1160c44"><span class="section-number-4">1.3.5</span> 3.5 R 型看森林，L 型看树木</h4>
+</div>
+<div id="outline-container-org90e2111" class="outline-4">
+<h4 id="org90e2111"><span class="section-number-4">1.3.6</span> 3.6 DIY 脑部手术和神经可塑性</h4>
+<div class="outline-text-4" id="text-1-3-6">
+</div><ol class="org-ol"><li><a id="orgb6ba2b7"></a>不使用就失去<br  /></li></ol>
+</div>
+</div>
+<div id="outline-container-org023a5a1" class="outline-3">
+<h3 id="org023a5a1"><span class="section-number-3">1.4</span> 利用右脑</h3>
+<div class="outline-text-3" id="text-1-4">
+</div><div id="outline-container-org18392f2" class="outline-4">
+<h4 id="org18392f2"><span class="section-number-4">1.4.1</span> 4.1 启动感官输入</h4>
+<div class="outline-text-4" id="text-1-4-1">
+</div><ol class="org-ol"><li><a id="org8aa8248"></a>做触觉游戏缓解疲劳<br  /></li>
+<li><a id="orgedad9e6"></a>利用多感官反馈<br  /></li>
+<li><a id="org88a130a"></a>刺激你的大脑<br  /></li></ol>
+</div>
+<div id="outline-container-org61a1b59" class="outline-4">
+<h4 id="org61a1b59"><span class="section-number-4">1.4.2</span> 4.2 用右脑画画</h4>
+<div class="outline-text-4" id="text-1-4-2">
+</div><ol class="org-ol"><li><a id="orgf250f0b"></a>绘画既是观察<br  /></li>
+<li><a id="org5b25f10"></a>限制认知干扰<br  /></li>
+<li><a id="org4cf9031"></a>角色扮演<br  /></li></ol>
+</div>
+<div id="outline-container-org4081aa4" class="outline-4">
+<h4 id="org4081aa4"><span class="section-number-4">1.4.3</span> 4.3 促进 R 型到 L 型的转换</h4>
+<div class="outline-text-4" id="text-1-4-3">
+</div><ol class="org-ol"><li><a id="org6cbdbd3"></a>建立 R 型到 L 型的转换<br  /></li>
+<li><a id="orgb0cd2bc"></a>如果没有全局的概念就试图记忆细节，会陷入僵局<br  /></li>
+<li><a id="orgbd25cfb"></a>结对编程<br  /></li>
+<li><a id="orgf4d0a74"></a>使用随机并列来创建隐喻<br  /></li>
+<li><a id="orgcea6621"></a>提出衍生性隐喻是很困难的<br  /></li></ol>
+</div>
+<div id="outline-container-org9d08b4d" class="outline-4">
+<h4 id="org9d08b4d"><span class="section-number-4">1.4.4</span> 4.4 收获 R 型线索</h4>
+<div class="outline-text-4" id="text-1-4-4">
+</div><ol class="org-ol"><li><a id="orgb7db0f4"></a>一切输入都被储存<br  /></li>
+<li><a id="org2d73cbd"></a>许多想法是无法用语言描述的<br  /></li>
+<li><a id="orgdc88b17"></a>利用图像流<br  /></li>
+<li><a id="orgd91de8f"></a>利用自由日记<br  /></li>
+<li><a id="orge5d9290"></a>晨写<br  /></li>
+<li><a id="org5b27e40"></a>自由写<br  /></li>
+<li><a id="org82d8021"></a>散步<br  /></li>
+<li><a id="org6de2e90"></a>庞加莱的解题技巧<br  /></li>
+<li><a id="org2d2980c"></a>R 型只能邀请，不能强制命令<br  /></li></ol>
+</div>
+<div id="outline-container-org7587f64" class="outline-4">
+<h4 id="org7587f64"><span class="section-number-4">1.4.5</span> 收获模式</h4>
+<div class="outline-text-4" id="text-1-4-5">
+</div><ol class="org-ol"><li><a id="org40d0886"></a>代码，一次编写，多次阅读<br  /></li>
+<li><a id="orgfcce3a5"></a>适应不同技术层次<br  /></li>
+<li><a id="orgf7c6da9"></a>换换脑子<br  /></li>
+<li><a id="org39457aa"></a>把问题倒过来<br  /></li>
+<li><a id="org9bd9d8d"></a>思维枷锁<br  /></li>
+<li><a id="org0eb89c6"></a>调和不同的模式<br  /></li></ol>
+</div>
+</div>
+<div id="outline-container-orga6ba82c" class="outline-3">
+<h3 id="orga6ba82c"><span class="section-number-3">1.5</span> 调试大脑</h3>
+<div class="outline-text-3" id="text-1-5">
+</div><div id="outline-container-orge74e2ec" class="outline-4">
+<h4 id="orge74e2ec"><span class="section-number-4">1.5.1</span> 5.1 了解认知偏见</h4>
+<div class="outline-text-4" id="text-1-5-1">
+</div><ol class="org-ol"><li><a id="orgcc50e5e"></a>思维定式<br  /></li>
+<li><a id="org16ca30c"></a>基本归因错误<br  /></li>
+<li><a id="org0c50a36"></a>自私的偏见<br  /></li>
+<li><a id="orge3031cb"></a>需要定论<br  /></li>
+<li><a id="org67c2559"></a>认可上的偏见<br  /></li>
+<li><a id="orga6ed27b"></a>曝光效应<br  /></li>
+<li><a id="org42087dd"></a>霍桑效应<br  /></li>
+<li><a id="orgcd5eb64"></a>虚假记忆<br  /></li>
+<li><a id="orgf81f1b1"></a>符号约简谬论<br  /></li>
+<li><a id="orgbbe02ec"></a>名词谬论<br  /></li>
+<li><a id="orgf342d7f"></a>柏拉图圈<br  /></li>
+<li><a id="org0f6bd36"></a>相关性与因果性<br  /></li>
+<li><a id="orge191225"></a>很少不意味没有<br  /></li>
+<li><a id="org4a66ca7"></a>绝不说绝不<br  /></li>
+<li><a id="org7cba811"></a>推迟下结论<br  /></li>
+<li><a id="orgb7be5a5"></a>通过明确的概率进行猜想<br  /></li></ol>
+</div>
+<div id="outline-container-org39c6565" class="outline-4">
+<h4 id="org39c6565"><span class="section-number-4">1.5.2</span> 5.2 认清时代影响</h4>
+<div class="outline-text-4" id="text-1-5-2">
+</div><ol class="org-ol"><li><a id="org2806050"></a>重视情境<br  /></li>
+<li><a id="orgb19897c"></a>态度会改变<br  /></li>
+<li><a id="orgd957c75"></a>一种原型创建了其反面类型<br  /></li></ol>
+</div>
+<div id="outline-container-org1768fbb" class="outline-4">
+<h4 id="org1768fbb"><span class="section-number-4">1.5.3</span> 5.3 了解个性倾向</h4>
+</div>
+<div id="outline-container-org386f864" class="outline-4">
+<h4 id="org386f864"><span class="section-number-4">1.5.4</span> 5.4 找出硬件问题</h4>
+<div class="outline-text-4" id="text-1-5-4">
+</div><ol class="org-ol"><li><a id="orgb8802a6"></a>蜥蜴逻辑<br  /></li></ol>
+</div>
+<div id="outline-container-org0f8e14e" class="outline-4">
+<h4 id="org0f8e14e"><span class="section-number-4">1.5.5</span> 5.5 现在我不知道该思考什么</h4>
+<div class="outline-text-4" id="text-1-5-5">
+</div><ol class="org-ol"><li><a id="org1e0380e"></a>你怎么知道的<br  /></li>
+<li><a id="orgfbb5ada"></a>预期影响现实<br  /><ol class="org-ol"><li><a id="orgbd618a3"></a><br  /></li></ol></li></ol>
+</div>
+</div>
+<div id="outline-container-orgecd29d7" class="outline-3">
+<h3 id="orgecd29d7"><span class="section-number-3">1.6</span> 主动学习</h3>
+<div class="outline-text-3" id="text-1-6">
+</div><div id="outline-container-org56ae0de" class="outline-4">
+<h4 id="org56ae0de"><span class="section-number-4">1.6.1</span> 6.1 学习是什么，不是什么</h4>
+<div class="outline-text-4" id="text-1-6-1">
+</div><ol class="org-ol"><li><a id="orgf2d9d7a"></a>点燃你的火焰<br  /></li></ol>
+</div>
+<div id="outline-container-org7ce139d" class="outline-4">
+<h4 id="org7ce139d"><span class="section-number-4">1.6.2</span> 6.2 瞄准 SMART 目标</h4>
+<div class="outline-text-4" id="text-1-6-2">
+</div><ol class="org-ol"><li><a id="org0ff861e"></a>目标任务使你更接近目标<br  /></li>
+<li><a id="org1c5b72d"></a>具体的<br  /></li>
+<li><a id="orgd8e22f8"></a>可度量的<br  /></li>
+<li><a id="org62d414f"></a>可实现的<br  /></li>
+<li><a id="org1d5add8"></a>相关的<br  /></li>
+<li><a id="org6045e23"></a>时间可控的<br  /></li></ol>
+</div>
+<div id="outline-container-orgbde7fb3" class="outline-4">
+<h4 id="orgbde7fb3"><span class="section-number-4">1.6.3</span> 6.3 建立一个务实的投资计划</h4>
+<div class="outline-text-4" id="text-1-6-3">
+</div><ol class="org-ol"><li><a id="org8604354"></a>时间是无法创造和销毁的，时间只能被分配<br  /></li>
+<li><a id="org48cba5c"></a>制定具体计划<br  /></li>
+<li><a id="orgde0dec5"></a>多样性<br  /></li>
+<li><a id="org1e9f340"></a>所有知识投资都有价值<br  /></li>
+<li><a id="org6ec894d"></a>主动的，而不是被动的投资<br  /></li>
+<li><a id="orga150e1c"></a>定期投资<br  /></li></ol>
+</div>
+<div id="outline-container-org39564d9" class="outline-4">
+<h4 id="org39564d9"><span class="section-number-4">1.6.4</span> 6.4 使用你的原生学习模式</h4>
+<div class="outline-text-4" id="text-1-6-4">
+</div><ol class="org-ol"><li><a id="orgb44702f"></a>性格类型 （阅读）<br  /></li></ol>
+</div>
+<div id="outline-container-org2993fb6" class="outline-4">
+<h4 id="org2993fb6"><span class="section-number-4">1.6.5</span> 6.5 一起工作，一起学习</h4>
+</div>
+<div id="outline-container-orge8d113e" class="outline-4">
+<h4 id="orge8d113e"><span class="section-number-4">1.6.6</span> 6.7 使用 SQ3R 法主动阅读</h4>
+<div class="outline-text-4" id="text-1-6-6">
+</div><ol class="org-ol"><li><a id="orgb684f5f"></a>调查 问题 阅读 复述 回顾<br  /></li>
+<li><a id="org77aa7a5"></a>测试驱动学习法<br  /></li></ol>
+</div>
+<div id="outline-container-org2ad7fb6" class="outline-4">
+<h4 id="org2ad7fb6"><span class="section-number-4">1.6.7</span> 6.8 使用思维导图</h4>
+<div class="outline-text-4" id="text-1-6-7">
+</div><ol class="org-ol"><li><a id="org008ea2a"></a>写作和阅读一样重要<br  /></li></ol>
+</div>
+<div id="outline-container-orgbd3dc39" class="outline-4">
+<h4 id="orgbd3dc39"><span class="section-number-4">1.6.8</span> 6.9 利用文档的真正力量</h4>
+</div>
+<div id="outline-container-orgc516b7a" class="outline-4">
+<h4 id="orgc516b7a"><span class="section-number-4">1.6.9</span> 6.10 以教代学</h4>
+<div class="outline-text-4" id="text-1-6-9">
+</div><ol class="org-ol"><li><a id="orga2369bb"></a>和橡皮鸭聊天<br  /></li></ol>
+</div>
+</div>
+<div id="outline-container-org831c1bb" class="outline-3">
+<h3 id="org831c1bb"><span class="section-number-3">1.7</span> 积累经验</h3>
+<div class="outline-text-3" id="text-1-7">
+</div><div id="outline-container-orgf7562ad" class="outline-4">
+<h4 id="orgf7562ad"><span class="section-number-4">1.7.1</span> 7.1 为了学习而玩耍</h4>
+<div class="outline-text-4" id="text-1-7-1">
+</div><ol class="org-ol"><li><a id="org1b37dfb"></a>趣味性很重要<br  /></li></ol>
+</div>
+<div id="outline-container-org4617b86" class="outline-4">
+<h4 id="org4617b86"><span class="section-number-4">1.7.2</span> 7.2 利用现有知识</h4>
+</div>
+<div id="outline-container-orgd19bcb7" class="outline-4">
+<h4 id="orgd19bcb7"><span class="section-number-4">1.7.3</span> 7.3 正确对待实验中的失败</h4>
+<div class="outline-text-4" id="text-1-7-3">
+</div><ol class="org-ol"><li><a id="org1e68393"></a>建立安全探索环境<br  /><ol class="org-ol"><li><a id="org248e83d"></a>自由实验<br  /></li>
+<li><a id="org666aee5"></a>能够原路返回稳定状态<br  /></li>
+<li><a id="org22516fb"></a>重现任意时刻的工作产品<br  /></li>
+<li><a id="orgc9caf76"></a>能够证明进展<br  /></li></ol></li></ol>
+</div>
+<div id="outline-container-org21937fb" class="outline-4">
+<h4 id="org21937fb"><span class="section-number-4">1.7.4</span> 7.4 了解内在诀窍</h4>
+<div class="outline-text-4" id="text-1-7-4">
+</div><ol class="org-ol"><li><a id="orgdd3e299"></a>通过探索可以学的更好，而不是指令<br  /></li></ol>
+</div>
+<div id="outline-container-orga466862" class="outline-4">
+<h4 id="orga466862"><span class="section-number-4">1.7.5</span> 7.5 压力扼杀认知</h4>
+</div>
+<div id="outline-container-org7b767de" class="outline-4">
+<h4 id="org7b767de"><span class="section-number-4">1.7.6</span> 7.6 想象超越观感</h4>
+</div>
+<div id="outline-container-orgbcea706" class="outline-4">
+<h4 id="orgbcea706"><span class="section-number-4">1.7.7</span> 7.7 像专家一样学习</h4>
+</div>
+</div>
+<div id="outline-container-org9558be9" class="outline-3">
+<h3 id="org9558be9"><span class="section-number-3">1.8</span> 控制注意力</h3>
+<div class="outline-text-3" id="text-1-8">
+</div><div id="outline-container-org1704c30" class="outline-4">
+<h4 id="org1704c30"><span class="section-number-4">1.8.1</span> 8.1 提高注意力</h4>
+<div class="outline-text-4" id="text-1-8-1">
+</div><ol class="org-ol"><li><a id="org0ab9531"></a>如何冥想<br  /></li></ol>
+</div>
+<div id="outline-container-orgc288304" class="outline-4">
+<h4 id="orgc288304"><span class="section-number-4">1.8.2</span> 8.2 通过分散注意力来集中注意力</h4>
+</div>
+<div id="outline-container-orgb5a7e64" class="outline-4">
+<h4 id="orgb5a7e64"><span class="section-number-4">1.8.3</span> 8.3 管理知识</h4>
+<div class="outline-text-4" id="text-1-8-3">
+</div><ol class="org-ol"><li><a id="org19c482a"></a>利用观感调整收集更多想法<br  /></li></ol>
+</div>
+<div id="outline-container-orgb76f98f" class="outline-4">
+<h4 id="orgb76f98f"><span class="section-number-4">1.8.4</span> 8.4 优化当前情境</h4>
+<div class="outline-text-4" id="text-1-8-4">
+</div><ol class="org-ol"><li><a id="org1292d69"></a>需要平均 20 分钟恢复到当前工作<br  /></li>
+<li><a id="org1d21536"></a>单任务界面<br  /></li>
+<li><a id="org4aea074"></a>GTD<br  /></li></ol>
+</div>
+<div id="outline-container-org9517e1d" class="outline-4">
+<h4 id="org9517e1d"><span class="section-number-4">1.8.5</span> 8.5 积极的管理干扰</h4>
+<div class="outline-text-4" id="text-1-8-5">
+</div><ol class="org-ol"><li><a id="orgcba99ae"></a>提高进出情境的成本<br  /></li>
+<li><a id="orgd8fd731"></a>为打断做好准备<br  /></li></ol>
+</div>
+<div id="outline-container-org608f49d" class="outline-4">
+<h4 id="org608f49d"><span class="section-number-4">1.8.6</span> 8.6 保持足够大的情境</h4>
+<div class="outline-text-4" id="text-1-8-6">
+</div><ol class="org-ol"><li><a id="org570ed41"></a>使用虚拟桌面<br  /></li></ol>
+</div>
+</div>
+<div id="outline-container-orgf0fe7fe" class="outline-3">
+<h3 id="orgf0fe7fe"><span class="section-number-3">1.9</span> 超越专家</h3>
+<div class="outline-text-3" id="text-1-9">
+</div><div id="outline-container-org9a98a5e" class="outline-4">
+<h4 id="org9a98a5e"><span class="section-number-4">1.9.1</span> 9.1 有效的改变</h4>
+<div class="outline-text-4" id="text-1-9-1">
+</div><ol class="org-ol"><li><a id="org7f3bfd5"></a>制定计划<br  /></li>
+<li><a id="org0854b1b"></a>“不作为”是敌人，“错误”不是<br  /></li>
+<li><a id="org89f5d27"></a>给新习惯适应的时间<br  /></li>
+<li><a id="org593f3d4"></a>信念是真实的<br  /></li>
+<li><a id="org3fafa33"></a>采取步步为营的细小步骤<br  /></li></ol>
+</div>
+<div id="outline-container-org0d11954" class="outline-4">
+<h4 id="org0d11954"><span class="section-number-4">1.9.2</span> 9.2 明天上午做什么</h4>
+</div>
+<div id="outline-container-org114f56b" class="outline-4">
+<h4 id="org114f56b"><span class="section-number-4">1.9.3</span> 9.3 超越专家</h4>
+</div>
+</div>
+<div id="outline-container-orgc9b1060" class="outline-3">
+<h3 id="orgc9b1060"><span class="section-number-3">1.10</span> 诀窍</h3>
+<div class="outline-text-3" id="text-1-10">
+</div><ol class="org-ol"><li><a id="org1780e12"></a>始终关注情境<br  /></li>
+<li><a id="orgd4b017f"></a>新手使用规则，专家使用直觉<br  /></li>
+<li><a id="org6268332"></a>知道你不知道什么<br  /></li>
+<li><a id="org0fe3612"></a>通过观察和模仿来学习<br  /></li>
+<li><a id="orgae344ad"></a>保持实践以维持专家水平<br  /></li>
+<li><a id="org404c3ba"></a>如果你需要创造力和直觉，避免使用形式方法<br  /></li>
+<li><a id="orga08c0a9"></a>学习如何学习的技能<br  /></li>
+<li><a id="org6f18052"></a>捕获所有的想法以从中获益更多<br  /></li>
+<li><a id="org5f4f64c"></a>综合学习与分析学习并重<br  /></li>
+<li><a id="org25054bf"></a>争取好的设计<br  /></li>
+<li><a id="orgc6658f6"></a>重新连线大脑，坚信这一点并不断实践<br  /></li>
+<li><a id="org6585554"></a>增加感官体验以促进大脑的使用<br  /></li>
+<li><a id="orgc89af61"></a>R 型开路，L 型紧跟<br  /></li>
+<li><a id="org1becc91"></a>使用隐喻作为 L 和 R 相融之所<br  /></li>
+<li><a id="org45ae6ad"></a>培养幽默感来建立强大的隐喻<br  /></li>
+<li><a id="orgd32115a"></a>离开键盘去解决难题<br  /></li>
+<li><a id="orga44cc99"></a>改变解决问题的角度<br  /></li>
+<li><a id="orgbe2dd72"></a>很少不意味没有<br  /></li>
+<li><a id="orgff12467"></a>适应不确定性<br  /></li>
+<li><a id="org48eb1cd"></a>信任记录而不是记忆<br  /></li>
+<li><a id="orgcd75f7c"></a>从多个角度看问题<br  /></li>
+<li><a id="org91f2b57"></a>尊重不同人的不同性格<br  /></li>
+<li><a id="orgc8b252e"></a>像高级动物一样，做深呼吸，而不是张嘴嘶鸣<br  /></li>
+<li><a id="org5606308"></a>相信直觉，但需要验证<br  /></li>
+<li><a id="org6d6c398"></a>建立 SMART 任务实现你的目标<br  /></li>
+<li><a id="org281f064"></a>对主动学习的投资做好计划<br  /></li>
+<li><a id="org659b1f2"></a>发现你的最佳学习设置<br  /></li>
+<li><a id="org669b970"></a>组织学习小组学习和辅导<br  /></li>
+<li><a id="orgb06bf12"></a>主动阅读<br  /></li>
+<li><a id="orge2d4e90"></a>同时使用 R 型 L 型记笔记<br  /></li>
+<li><a id="org124041a"></a>写文档的过程比文档本身重要<br  /></li>
+<li><a id="orgbcc350a"></a>观察，实践，教学<br  /></li>
+<li><a id="orga55a51f"></a>为了更好的学习，请更好的玩<br  /></li>
+<li><a id="org7fab8d8"></a>从相似中学习，从差异中忘却<br  /></li>
+<li><a id="org3cefa84"></a>再环境中安全的探索，创造和应用<br  /></li>
+<li><a id="orgfd122f9"></a>观察，不做判断，然后行动<br  /></li>
+<li><a id="org126a7d4"></a>允许失败，你会走向成功<br  /></li>
+<li><a id="org67b9952"></a>让大脑为成功形成惯例<br  /></li>
+<li><a id="org0533481"></a>学习集中注意力<br  /></li>
+<li><a id="org9abbcc7"></a>挤出思维的时间<br  /></li>
+<li><a id="orgb78f692"></a>使用 wiki 来管理信息和知识<br  /></li>
+<li><a id="org229a716"></a>制定交流规则来管理干扰<br  /></li>
+<li><a id="orgb723f21"></a>少发送邮件，就会少收到邮件<br  /></li>
+<li><a id="org9a05bd9"></a>为邮件通信选择你自己的进度<br  /></li>
+<li><a id="org0761d4a"></a>屏蔽中断来保持注意力<br  /></li>
+<li><a id="org1b313c2"></a>使用多台显示器来避免情境切换<br  /></li>
+<li><a id="org8fcd1ec"></a>优化你的个人工作流以最大化情境<br  /></li>
+<li><a id="orgc079dfc"></a>抓住方向盘，你不能自动驾驶<br  /></li></ol>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2017-01-07 周六 16:38</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

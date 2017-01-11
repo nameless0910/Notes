@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-01-07 周六 16:49 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org2ba60da">1. Philosophy</a></li>
+<li><a href="#org75701c1">2. History</a></li>
+<li><a href="#org9d171e9">3. Contrasts Unix Philosophy with Others</a></li>
+<li><a href="#org74091fc">4. Modularity</a></li>
+<li><a href="#orgbc4df24">5. Textuality</a></li>
+<li><a href="#org157553a">6. Transparency</a></li>
+<li><a href="#orgf7032a4">7. Multiprogramming</a></li>
+<li><a href="#orge1616c0">8. Minilanguages</a></li>
+<li><a href="#org3d07384">9. Generation</a></li>
+<li><a href="#org661105a">10. Configuration</a></li>
+<li><a href="#org8bf244e">11. Interfaces</a></li>
+<li><a href="#orgae1e0c6">12. Optimization</a></li>
+<li><a href="#orgcd0d643">13. Complexity</a></li>
+<li><a href="#orgd127015">14. Languages</a>
+<ul>
+<li><a href="#org377a496">14.1. C</a></li>
+<li><a href="#orge725c1d">14.2. C++</a></li>
+<li><a href="#orged7a079">14.3. Shell</a></li>
+<li><a href="#orgac7f07a">14.4. Perl</a></li>
+<li><a href="#org03adc78">14.5. Tcl</a></li>
+<li><a href="#org6c42c2b">14.6. Python</a></li>
+<li><a href="#org9a23fd5">14.7. Java</a></li>
+<li><a href="#org6817551">14.8. Emacs Lisp</a></li>
+</ul>
+</li>
+<li><a href="#orgabe40f7">15. Tools</a></li>
+<li><a href="#org6effd07">16. Reuse:On Not REinventing the Wheel</a></li>
+<li><a href="#org505dc01">17. Portability</a></li>
+<li><a href="#org7fb897b">18. Documentation</a></li>
+<li><a href="#org5f7c4c9">19. Open Source</a></li>
+<li><a href="#org14fba1f">20. Futures</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2ba60da" class="outline-2">
+<h2 id="org2ba60da"><span class="section-number-2">1</span> Philosophy</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>只提供机制而不提供方针的哲学</li>
+<li>跨平台可移植性</li>
+<li>Internet 和万维网</li>
+<li>灵活性</li>
+<li>Unix Hack</li>
+<li>Down-to-top</li>
+<li>Unix 管道发明者 Mcllroy
+<ol class="org-ol">
+<li>One Procedure Do One Thing,Don't add new feature to orign procedure</li>
+<li>Assum One Output is Other's Input. Avoid serious format.Don't  insist interactive imput</li>
+<li>Use dsign and sorfware early,Rewrite clumsy code</li>
+<li>Use tools to make things easy firstly</li>
+</ol></li>
+<li><p>
+Pike
+</p>
+<ol class="org-ol">
+<li>Don't change codes until you make sure is the bottleneck</li>
+<li>Estimate,and then optimize speed</li>
+<li>If n is large,you can consider garish algorithms,base 2</li>
+<li>Try to use simple algothms and data structure,Garish algothms are easily having bug</li>
+<li>The core of programming is data structure,not algothms</li>
+</ol>
+<p>
+Note:Ken Thomspon think 4 is important and he told that exhaustion if you don't sure
+</p></li>
+<li>Summary of Unix Philosophy
+<ol class="org-ol">
+<li>Clean APIs combine simple component</li>
+<li>Clearly</li>
+<li>Consider combining when you design
+<ul class="org-ul">
+<li>以一点点格式解析的代价，换得可以使用通用工具来构造和解读数据流</li>
+<li>把尽可能多的编程元素组织为一套定义良好的 API</li>
+</ul></li>
+<li>Separation
+<ul class="org-ul">
+<li>将应用按照一个库来编写,应用的控制流程由脚本撰写,like Emacs</li>
+<li>将程序分成可以协作的前端和后端进程，通过套接字上层的专用应用协议进行通讯</li>
+</ul></li>
+<li>Clean,Uncomplex</li>
+<li>Programming small procedure</li>
+<li>Transparent,Design is visible,to debug and examine
+<ul class="org-ul">
+<li>程序带有监视和显示内部状态的功能</li>
+</ul></li>
+<li>Strongly
+<ul class="org-ul">
+<li>Consider large input</li>
+<li>Avoid exception</li>
+</ul></li>
+<li>Express, Logical</li>
+<li>Popilarity API</li>
+<li>Less comment</li>
+<li>when have a error,quit immediately,and have enough error message
+<ul class="org-ul">
+<li>宽容性</li>
+</ul></li>
+<li>Would rather cost machine one minute,don't waste one second</li>
+<li>Avoid hand wirte,Use procedure to produce produce</li>
+<li>Have a modeln before optimize
+<ul class="org-ul">
+<li>90%的功能现在实现,比 100%的功能永远实现不了好</li>
+<li>过早的优化是万恶之源</li>
+<li>先能走,再学跑</li>
+</ul></li>
+<li>Variously</li>
+<li>Expandly,Design consider fulture</li>
+</ol></li>
+<li>K.I.S.S</li>
+<li>Use Unix Philosophy
+<ol class="org-ol">
+<li>只要可行,Everything could be done as a filter without source and object</li>
+<li>Data flow try to textual</li>
+<li>DMS and application protocols textual</li>
+<li>Complex front-end separate with back-end</li>
+<li>Before use C,Use Interpreted language</li>
+<li>When only one language make complexly,Use more language</li>
+<li>宽收严发</li>
+<li>when filte message,Don't discard message that couldn't discard</li>
+<li>small is beatifully,work and have less feature</li>
+</ol></li>
+<li>Do when you see
+Note: If you don't which is true,do less work only make sure task finish until you know what is true</li>
+<li>Don't repeat wheel.</li>
+<li>Master tools and make all automation</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org75701c1" class="outline-2">
+<h2 id="org75701c1"><span class="section-number-2">2</span> History</h2>
+</div>
+<div id="outline-container-org9d171e9" class="outline-2">
+<h2 id="org9d171e9"><span class="section-number-2">3</span> Contrasts Unix Philosophy with Others</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>一切皆文件</li>
+<li>抢先式多任务</li>
+<li>管道及 IPC 要求把程序间的通讯简化到某一程度而促使功能分离</li>
+<li>内部边界
+<ol class="org-ol">
+<li>内存管理,用 MMU</li>
+<li>为多用户设置权限组</li>
+<li>涉及关键安全性的功能限制在尽可能小的可信代码块上</li>
+</ol></li>
+<li>文件属性和记录结构
+<ul class="org-ul">
+<li>Unix 全无</li>
+<li>另一些用 out-of-band data 将文档文件同能够解读它的 APP 关联,Unix 则使用 APP 识别"特征数"或是文件内的其他类型数据</li>
+</ul></li>
+<li>二进制文件格式
+<ul class="org-ul">
+<li>即时支持命令行接口,脚本和管道,也几乎无法形成 filter</li>
+<li>Data file 只有专用工具才能访问</li>
+</ul></li>
+<li>CLI 很弱导致
+<ul class="org-ul">
+<li>程序无法考虑未预料的方式相互协作</li>
+<li>远程系统管理难于实现,更依赖网络</li>
+<li>简单的非交互程序也导致 GUI 开销或复杂的脚本接口</li>
+<li>服务器,守护程序和后台进程几乎无法写出</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org74091fc" class="outline-2">
+<h2 id="org74091fc"><span class="section-number-2">4</span> Modularity</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>在程序的子程序层上进行模块化</li>
+<li>封装良好的模块不会
+<ul class="org-ul">
+<li>过多披露细节</li>
+<li>直接调用其他模块的实现码</li>
+<li>胡乱共享全局数据</li>
+</ul></li>
+<li>先定义接口,编写简要注释,再开始编写代码</li>
+<li>Brook 定律</li>
+<li>200 到 400 逻辑行的代码最好</li>
+<li>紧凑性:有经验的用户通常不需要用户手册</li>
+<li>正交性</li>
+<li>SPOT
+<ul class="org-ul">
+<li>常量,表和元数据应该只声明和初始化一次,并导入其他地方</li>
+<li>如果代码有重复数据是因为在两个不同地方,考虑写个函数工具或代码生成程序</li>
+<li>文档重复了代码中的知识点,能否从部分代码中生成部分文档</li>
+<li>如果头文件和接口声明重复了实现代码中的知识点,是否可以从代码中生成头文件和接口声明</li>
+<li>数据结构:No junk,No confusion</li>
+</ul></li>
+<li>围绕解决一个定义明确的问题</li>
+<li>软件分层
+<ul class="org-ul">
+<li>自底向上
+<ol class="org-ol">
+<li>能够精确预知程序的任务</li>
+<li>实现中程序规格不会发生大的改变</li>
+<li>在底层,有充分自由来选择程序完成任务的方式</li>
+</ol></li>
+<li>自顶向下:操作在设计时能在不同的物理设备间通用</li>
+<li>抽象化硬件 | 围绕某个行为模型组织代码</li>
+<li>双管齐下:以 top-to-down 的应用逻辑表达抽象规范,以函数或库来收集底层的域原语</li>
+</ul></li>
+<li>胶合层:阻抗匹配(impedance match)
+<ul class="org-ul">
+<li>薄胶合层,不要组织一个中间层</li>
+<li>C</li>
+</ul></li>
+<li>库和插件</li>
+<li>OO 将数据结构函数和数据一起封装在可视为单元的一个对象中
+<ul class="org-ul">
+<li>OO 将人带入过度分层陷阱(抽象子类)</li>
+<li>使程序丧失优化机会</li>
+</ul></li>
+<li>模块式编码
+<ul class="org-ul">
+<li>有多少全局变量</li>
+<li>单个模块大小</li>
+<li>模块内单个函数大小:函数原型后立即写一行注释</li>
+<li>代码是否有内部 API</li>
+<li>{API 入口,类的方法,数据结构的成员}是否超过 7 个</li>
+<li>每个模块入口点数量如何分布</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbc4df24" class="outline-2">
+<h2 id="orgbc4df24"><span class="section-number-2">5</span> Textuality</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>marshaling unmarshaling</li>
+<li>互用性,透明性,可拓展性</li>
+<li>少用二进制协议</li>
+<li>二进制格式通常指定给定值的分配位数(IPv4 的地址是 32 位,要扩展到 128 位,如 IPv6,就需要大修改)</li>
+<li>使用二进制唯一理由:大批量数据(大图像和多媒体,延迟有极高要求)</li>
+<li>PNG 标准</li>
+<li>数据文件元格式
+<ul class="org-ul">
+<li>DSV(Delimiter-Separated Values)</li>
+</ul></li>
+<li>XML in a Nutshell[Harold-Means]</li>
+<li>Unix 文本文件格式的约定
+<ul class="org-ul">
+<li>如果可能,以新行符结束的每一行只存一个记录</li>
+<li>每行不超过 80 字符</li>
+<li>使用#引入注释</li>
+<li>支持反斜杠约定</li>
+<li>使用冒号或者任何连续的空白作为字段分隔符</li>
+<li>不要过分区别 TAB 和 whitespace</li>
+<li>优先选用 16 进制</li>
+<li>复杂记录,采用 stanza 格式,记录多行,用%%\n 或%\n 作为记录分隔符</li>
+<li>节格式中,要么每行一个记录字段,妖魔让记录格式用冒号终止的字段名关键字作为引导</li>
+<li>节格式支持连续行</li>
+<li>要么包含一个版本号,要么将格式设计成相互独立的自描述字节块</li>
+<li>注意浮点数取整问题</li>
+<li>不要仅对文件的一部分进行压缩或者转换成二进制码</li>
+<li>end-to-end</li>
+<li>End-to-End Arguments in System Design[Saltzer]</li>
+<li>SMTP</li>
+<li>IMAP</li>
+<li>应用协议元格式
+<ul class="org-ul">
+<li>HTTP</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org157553a" class="outline-2">
+<h2 id="org157553a"><span class="section-number-2">6</span> Transparency</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>用户:良好的文档 | 程序员:良好的变量和函数名</li>
+<li>透明性 | 可显性</li>
+<li>gcc(G:回归测试)</li>
+<li>找到一个方法,可以访问具体细节,有不太显眼</li>
+<li>不要叠加抽象层</li>
+<li>问题
+<ol class="org-ol">
+<li>程序调用最大静态深度谨慎大于 4</li>
+<li>代码不变性质</li>
+<li>API 各个函数调用是否正交</li>
+<li>是否存在一些顺手可用的关键数据结构或全局唯一的记录器,捕获了系统的高层次状态</li>
+<li>数据结构或分类是否和代表的外部实体清晰一对一对应</li>
+<li>是否容易找到给定函数的代码部分,多大精力读懂</li>
+<li>代码增加了特殊情况还是避免了特殊情况</li>
+<li>有多少 magic number</li>
+</ol></li>
+<li>不要过度保护</li>
+<li>编写 textualizer/浏览器</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf7032a4" class="outline-2">
+<h2 id="orgf7032a4"><span class="section-number-2">7</span> Multiprogramming</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>把程序分解成更简单的子进程
+<ol class="org-ol">
+<li>降低进程生成的开销</li>
+<li>提供方法(shellout,I/O 重定向,管道,消息传递和套接字)简化进程间的通信</li>
+<li>使用能由管道和套接字传递的简单,透明的文本数据格式</li>
+</ol></li>
+<li>Improving Context Switching Performance of Idle Tasks under Linux[Appleton]</li>
+<li>线程提高了全局复杂度,尽量避免使用多线程</li>
+<li>更强的安全性</li>
+<li>setuid bit | boly-on</li>
+<li>Unix Shell As a 4GL[Schaffe-Wolf]</li>
+<li>管道缺点是单向性</li>
+<li>Wrapper</li>
+<li>Bernstein chaining</li>
+<li>从进程
+<ul class="org-ul">
+<li>两者间涉及的协议无足轻重</li>
+<li>应用协议通讯</li>
+</ul></li>
+<li>对等进程间通信
+<ul class="org-ul">
+<li>临时文件</li>
+<li>信号</li>
+<li>套接字</li>
+<li>共享内存</li>
+</ul></li>
+<li>线程:时许依赖(问题) 锁定和解锁成本高</li>
+<li>Why Threads Are a Bad Idea[Ousterhout96]</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge1616c0" class="outline-2">
+<h2 id="orge1616c0"><span class="section-number-2">8</span> Minilanguages</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>设计
+<ol class="org-ol">
+<li>预先认识到可以使用微型语言设计把编程问题的规格说明提升一个层次</li>
+<li>注意带规格说明文件格式越来越类似微型语言</li>
+<li>Wrong :n 通过扩展变成微型语言</li>
+</ol></li>
+<li>XSLT:Mastering XML Transformations[Tidwell]</li>
+<li>syntactic sugar</li>
+<li>Notable Design Patterns for Domain-Specific Languages[Spinellis]</li>
+<li>sandboxed</li>
+<li>宏-慎用</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3d07384" class="outline-2">
+<h2 id="org3d07384"><span class="section-number-2">9</span> Generation</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>数据驱动编程
+<ul class="org-ul">
+<li>与 OO 区别
+<ol class="org-ol">
+<li>数据驱动编程中,数据不仅仅是某个对象的状态,实际上还定义了程序的控制流</li>
+<li>OO 首先考虑封装,而数据驱动编程看重编写尽可能少的固定代码</li>
+</ol></li>
+<li>内省,metaclass hacking</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org661105a" class="outline-2">
+<h2 id="org661105a"><span class="section-number-2">10</span> Configuration</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li>一切皆可配置</li>
+<li>对于能够可靠的进行自动检测的东西,不要提供配置开关</li>
+<li>用户不应该看到优化开关</li>
+<li>增加配置选项
+<ul class="org-ul">
+<li>能省掉吗</li>
+<li>能否通过改变程序的常规行为从而无需这个选项</li>
+<li>少考虑可配置性,多考虑正确性</li>
+<li>选项附加的行为是否应该用一个独立的程序来代替</li>
+</ul></li>
+<li>风格
+<ol class="org-ol">
+<li>#开始的说明性注释</li>
+<li>不区别空白符</li>
+<li>把多个空行和注释行视为单个空行</li>
+<li>词法上把文件视作简单的用空吧分割的标记序列</li>
+<li>支持以字符串语法对待内嵌空白符的标记,使用单或爽引号作为对称的分隔符</li>
+<li>支持\语法</li>
+</ol></li>
+<li>可移植性</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8bf244e" class="outline-2">
+<h2 id="org8bf244e"><span class="section-number-2">11</span> Interfaces</h2>
+<div class="outline-text-2" id="text-11">
+<ul class="org-ul">
+<li>最小立异原则</li>
+<li>简洁:表现力,易用,透明和脚本化能力</li>
+<li>过滤器模式{Cantrip 源 接收器 编译器 ed Roguelike CLI 服务器 基于语言</li>
+<li>引擎和接口分离}
+<ul class="org-ul">
+<li>配置者/执行者</li>
+<li>假脱机/守护进程</li>
+<li>驱动/引擎</li>
+<li>客户端/服务器</li>
+</ul></li>
+<li>多价程序模式</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgae1e0c6" class="outline-2">
+<h2 id="orgae1e0c6"><span class="section-number-2">12</span> Optimization</h2>
+<div class="outline-text-2" id="text-12">
+<ul class="org-ul">
+<li>将空间或者时间复杂度降下来</li>
+<li>先估量,再优化</li>
+<li>保持代码短小简单</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcd0d643" class="outline-2">
+<h2 id="orgcd0d643"><span class="section-number-2">13</span> Complexity</h2>
+</div>
+<div id="outline-container-orgd127015" class="outline-2">
+<h2 id="orgd127015"><span class="section-number-2">14</span> Languages</h2>
+<div class="outline-text-2" id="text-14">
+<ul class="org-ul">
+<li>C/C++以增加实现时间和(特别是)调试时间来优化效率</li>
+<li>Center Question: Programmer manager memory themselves
+<ul class="org-ul">
+<li>声明变量 显式管理链表 设置缓冲大小 检测或防止缓冲溢出 分配和回收动态储存</li>
+</ul></li>
+<li>使用脚本语言的性能损失微不足道,真实世界的程序往往由 I/O 事件等待,网络延迟以及缓存列填充等限制</li>
+<li>避免手动管理内存的语言通过运行时向可执行体嵌入一个内存管理器,运行环境分为程序部分及解释器部分,解释器内核由多个程序部分共享</li>
+</ul>
+</div>
+<div id="outline-container-org377a496" class="outline-3">
+<h3 id="org377a496"><span class="section-number-3">14.1</span> C</h3>
+<div class="outline-text-3" id="text-14-1">
+<ul class="org-ul">
+<li>要求速度最快且需要实时需求,或与 OS 内核紧密联系</li>
+<li>必须在多个 OS 上移植</li>
+<li>尽可能接近裸机,保持稳定</li>
+<li>在 Unix 间移植 C 几乎总是可行,但在诸如信号和进程控制需要一些技巧</li>
+<li>C 代码生成器从声明的说明规格中为 tokenizer 和语法分析器生成源码,yacc 和 lex</li>
+<li>The C Programming Language[Ritchie]</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge725c1d" class="outline-3">
+<h3 id="orge725c1d"><span class="section-number-3">14.2</span> C++</h3>
+<div class="outline-text-3" id="text-14-2">
+<ul class="org-ul">
+<li>对后兼容 C 的要求阻碍了 C++完全自动化动态内存管理</li>
+<li>不成熟的标准化</li>
+<li>OO 方法导致厚重胶合层和维护问题</li>
+<li>与 LISP 相似的异常:在被处理程序捕捉之前可以沿调用栈向上 pop 出值或对象</li>
+<li>STL 提供了泛型编程</li>
+<li>Use C++ when its library have good method for your application,or OO have large advantage</li>
+<li>The C++ Programming Language[Stroustrup] C++:A Dialog[Heller] C++ Annotations[Brokken]</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orged7a079" class="outline-3">
+<h3 id="orged7a079"><span class="section-number-3">14.3</span> Shell</h3>
+<div class="outline-text-3" id="text-14-3">
+<ul class="org-ul">
+<li>shell have portable problem:Use many assist instruction</li>
+<li>The Unix Programming Environment[Kernighan-Pike]</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgac7f07a" class="outline-3">
+<h3 id="orgac7f07a"><span class="section-number-3">14.4</span> Perl</h3>
+<div class="outline-text-3" id="text-14-4">
+<ul class="org-ul">
+<li>Perl 是增强版 shell,为了替代 awk 而设计</li>
+<li>最强功能是其内置的对文本,面向行的数据格式进行模式导向的处理功能(正则表达式)</li>
+<li>包含更强大的数据结构,包括混合元素类型的动态数组和支持名-值对应的字典类型</li>
+<li>完备的 Unix API 支持</li>
+<li>适合完成简单的 TCP/IP 客户端或者服务器端</li>
+<li>强大的社区</li>
+<li>主要缺点:某些{丑陋,复杂,需要谨慎使用}</li>
+<li>Programming Perl[Wall] Learning Perl[Schwartz]</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org03adc78" class="outline-3">
+<h3 id="org03adc78"><span class="section-number-3">14.5</span> Tcl</h3>
+<div class="outline-text-3" id="text-14-5">
+<ul class="org-ul">
+<li>设计用来连入 C 编译库的小型语言解释器,提供 C 代码的脚本控制,也适用与内嵌脚本</li>
+<li>没有保留字, 在函数调用和内置语言特性间没有语法区别</li>
+<li>缺点:薄弱的命名空间控制和模块性功能,除关联列表外没有数据结构,很难扩展 Tcl,语法怪异</li>
+<li>Practical Programming in Tcl and Tk[Welch]</li>
+<li>Tcl 解释器的可扩展性,古怪的位置分析器</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6c42c2b" class="outline-3">
+<h3 id="org6c42c2b"><span class="section-number-3">14.6</span> Python</h3>
+<div class="outline-text-3" id="text-14-6">
+<ul class="org-ul">
+<li>设计本意是与 C 语言紧密集成</li>
+<li>出色的模块化特性,类型系统包括动态容器储存对象和关联列表,具有匿名 lambda 对象</li>
+<li>适合构建协议机器人和网络管理工具(标准发布包括大多数网络协议)</li>
+<li>由于运行期类型多态导致非常慢</li>
+<li>Programming Python[Lutz]</li>
+<li>可被 frozen,准编译成纯 c 源码</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9a23fd5" class="outline-3">
+<h3 id="org9a23fd5"><span class="section-number-3">14.7</span> Java</h3>
+<div class="outline-text-3" id="text-14-7">
+<ul class="org-ul">
+<li>最初设计目标: write once,run anywhere, 支持网页中嵌入交互程序,可在任何浏览器中运行</li>
+<li>自动管理内存的优势,支持 OO,保留大量类 C 语法,支持动态载入 C 调用并支持在 C 中把其作为嵌入语言</li>
+<li>类的可见/不可见区域的规定复杂,接口随避免多继承产生的复杂问题,但并不简单多少</li>
+<li>内部类和匿名类导致非常混乱的代码</li>
+<li>缺乏可靠的析构方法,意味内存以外的其他资源,如 mutex 和锁,难以保证得到正确管理</li>
+<li>Unix 的比如信号,poll,select 功能也无法从 Java 主体访问</li>
+<li>Java 没有管理不同库版本的方法</li>
+<li>Jave In A Nutshell[FlanaganJava] Thinking in Java[Eckel]</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6817551" class="outline-3">
+<h3 id="org6817551"><span class="section-number-3">14.8</span> Emacs Lisp</h3>
+<div class="outline-text-3" id="text-14-8">
+<ul class="org-ul">
+<li>为开发工具提供前端</li>
+<li>如何涉及交互编辑特定文件格式或文本数据的 Application,使用其进行原型设计都是最好的</li>
+<li>适合构建必须和文本编辑器紧密整合</li>
+<li>自动内存管理 OS 规范为 Emacs 内核</li>
+<li>狂吃资源(but today is not a problem)</li>
+<li>The GNU Emacs Lisp Reference Mabual[info]  Writing GNU Emacs Extensions[Glickstein]</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgabe40f7" class="outline-2">
+<h2 id="orgabe40f7"><span class="section-number-2">15</span> Tools</h2>
+<div class="outline-text-2" id="text-15">
+<ul class="org-ul">
+<li>IDE is well to simple language with less tools</li>
+<li>Programming with GNU Software[Loukides-Oram]</li>
+<li>Learning GNU Emacs[Cameron]</li>
+<li>yacc lex</li>
+<li>make Managing Projects with Make[Oram-Talbot]</li>
+<li>CVS</li>
+<li>gdb</li>
+<li>profiler</li>
+<li>Emacs</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6effd07" class="outline-2">
+<h2 id="org6effd07"><span class="section-number-2">16</span> Reuse:On Not REinventing the Wheel</h2>
+<div class="outline-text-2" id="text-16">
+<ul class="org-ul">
+<li>SourceForge Freshmeat ibiblio</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org505dc01" class="outline-2">
+<h2 id="org505dc01"><span class="section-number-2">17</span> Portability</h2>
+<div class="outline-text-2" id="text-17">
+<ul class="org-ul">
+<li>可移植性和编程语言的选择
+<ul class="org-ul">
+<li>C:IPC 线程 GUI 接口
+<ul class="org-ul">
+<li>Recommended C Style and Coding Standards[Cannon] The Practice of Programming[Pike-Kernighan]</li>
+</ul></li>
+<li>C++:编译器</li>
+<li><a href="大量使用其他他可移植性差的命令和过滤器">大量使用其他他可移植性差的命令和过滤器</a></li>
+<li>Perl:插件库</li>
+<li>Python:次版本号重要</li>
+<li>Tcl</li>
+<li>Java:线程</li>
+<li>Emacs Lisp</li>
+</ul></li>
+<li>避免系统依赖性</li>
+<li>autoconf</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7fb897b" class="outline-2">
+<h2 id="org7fb897b"><span class="section-number-2">18</span> Documentation</h2>
+<div class="outline-text-2" id="text-18">
+<ul class="org-ul">
+<li>troff | Documenter's Workbench | manpage</li>
+<li>TEX</li>
+<li>HTML</li>
+<li>DocBook</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5f7c4c9" class="outline-2">
+<h2 id="org5f7c4c9"><span class="section-number-2">19</span> Open Source</h2>
+<div class="outline-text-2" id="text-19">
+<ul class="org-ul">
+<li>原则
+<ol class="org-ol">
+<li>源码公开</li>
+<li>尽早发布,经常发布</li>
+<li>给贡献以表扬</li>
+</ol></li>
+<li>协同工作
+<ul class="org-ul">
+<li>发送针对当前版本代码的非可生成的补丁</li>
+<li>文档</li>
+<li>不要发送指使优化 RCS 或 SCCS 的补丁段</li>
+<li>用-c 或-u 而不是-e</li>
+<li>解释</li>
+<li>有益的注释</li>
+</ul></li>
+<li>文件命名:项目前缀-版本号.{src,bin}.归档和压缩扩展名</li>
+<li>健全检查</li>
+<li>README 拼写检查</li>
+<li>打包文件解包到单一文件下</li>
+<li>提供效验和</li>
+<li>交流</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org14fba1f" class="outline-2">
+<h2 id="org14fba1f"><span class="section-number-2">20</span> Futures</h2>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2017-01-07 周六 16:49</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
